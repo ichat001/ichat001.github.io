@@ -25,11 +25,11 @@
     /* 移动端（手机）样式：应用缩放 */
     @media screen and (max-width: 768px) {
       .iframe-container {
-        transform: scale(0.8);   /* 调整缩放比例，比如 0.8 就是缩小到 80% */
+        transform: scale(0.9);   /* 增大到 90%，文本相应变大 */
       }
       iframe {
-        width: 125%;   /* 根据缩放比例调整宽度 */
-        height: 125%;
+        width: 111.11%;   /* 根据 scale 0.9 补偿（1/0.9 ≈ 111.11%） */
+        height: 111.11%;
       }
     }
 
