@@ -14,13 +14,28 @@
     .iframe-container {
       width: 100%;
       height: 100%;
-      transform: scale(0.8);   /* 调整缩放比例，比如 0.8 就是缩小到 80% */
       transform-origin: top left;
     }
     iframe {
-      width: 125%;   /* 注意：要根据缩放比例调整宽度 */
-      height: 125%;
+      width: 100%;
+      height: 100%;
       border: none;
+    }
+
+    /* 移动端（手机）样式：应用缩放 */
+    @media screen and (max-width: 768px) {
+      .iframe-container {
+        transform: scale(0.8);   /* 调整缩放比例，比如 0.8 就是缩小到 80% */
+      }
+      iframe {
+        width: 125%;   /* 根据缩放比例调整宽度 */
+        height: 125%;
+      }
+    }
+
+    /* 可选：平板或更大屏幕的额外调整，如果需要 */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      /* 如果需要针对平板优化，可以在这里添加样式；否则保持默认 */
     }
   </style>
 </head>
